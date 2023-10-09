@@ -1,12 +1,17 @@
 # Diário do Projeto: Acompanhamento do Financiamento Coletivo do Jovem Nerd
 
+## Dias
+- [Dia 1](/jornal.md/#Dia-1)
+
+## Dia 1
+
 **Data:** 09/10/2023
 
 **Resumo:**
 Na sexta-feira passada, em 06/10/2023, o Jovem Nerd iniciou seu segundo financiamento coletivo, marcando outro sucesso notável. Desta vez, optaram por criar sua própria plataforma em vez de utilizar o Catarse como fizeram na primeira vez. Rapidamente, a campanha atingiu a marca de 3 milhões de reais arrecadados. ([ghanor.com.br](https://ghanor.com.br/))
 
 **Motivação:**
-Ao acompanhar o progresso da campanha, senti falta da facilidade de visualização oferecida pela plataforma do [Catarse]( (https://www.catarse.me/nerdcastrpg?ref=ctrse_explore_pgsearch#contributions)), que incluía gráficos informativos. Para resolver essa questão, decidi criar uma solução personalizada para monitorar e visualizar o progresso da campanha.
+Ao acompanhar o progresso da campanha, senti falta da facilidade de visualização oferecida pela plataforma do [Catarse](https://www.catarse.me/nerdcastrpg?ref=ctrse_explore_pgsearch#contributions), que incluía gráficos informativos. Para resolver essa questão, decidi criar uma solução personalizada para monitorar e visualizar o progresso da campanha.
 
 **Abordagem Técnica:**
 - Explorei a página da campanha e descobri que havia uma API que fornecia informações atualizadas sobre o valor arrecadado.
