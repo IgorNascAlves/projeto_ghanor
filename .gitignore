@@ -1,0 +1,6 @@
+__pycache__/
+.venv/
+datalake/
+airflow/
+data.csv
+plot.png

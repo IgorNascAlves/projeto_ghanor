@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data and Plot</title>
+    <meta http-equiv="refresh" content="60"> <!-- Refresh the page every 60 seconds -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Raised Amount</th>
+            </tr>
+        </thead>
+        <tbody id="data-table-body"> <!-- Added an ID for the tbody element -->
+            {% for row in data %}
+            <tr>
+                <td>{{ row.date }}</td>
+                <td>{{ row.raised_amount }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h1>Plot</h1>
+    <img src="{{ image_url }}" alt="Plot">
+
+    
+</body>
+</html>
