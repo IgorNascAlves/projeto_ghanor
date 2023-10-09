@@ -24,3 +24,13 @@ No entanto, a aplicação de monitoramento que criei parava de rodar sempre que 
 - Essa abordagem me permitirá explorar os dados com mais flexibilidade no futuro e criar visualizações mais avançadas.
 
 Com essas atualizações, o projeto está se tornando mais robusto e eficaz no acompanhamento do financiamento coletivo do Jovem Nerd. Continuarei a aprimorar e expandir essa solução à medida que o projeto avança.
+
+**Sugestões**
+
+Conversando com os meus amigos, ViS3C e Gui, recebi algumas sugestões incríveis para o meu projeto. Duas delas se destacaram:
+
+1. Coletar dados de campanhas anteriores, como a do Jovem Nerd e do Cellbit, para obter insights valiosos. Felizmente, o Catarse disponibiliza informações detalhadas sobre o desempenho das campanhas, o que facilitará a análise.
+
+2. Registrar as datas em que o Jovem Nerd realizou ações para engajar a campanha, como posts no Instagram e transmissões ao vivo no YouTube, e analisar o impacto dessas atividades. Embora essa parte do projeto envolva um trabalho manual, acreditamos que os resultados valerão a pena.
+
+Estou empolgado para colocar essas sugestões em prática e continuar a aprimorar o meu projeto.
