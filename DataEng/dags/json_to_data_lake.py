@@ -53,9 +53,6 @@ def save_to_local_folder(**kwargs):
     # if os.path.exists(last_saved_file):
     #     with open(last_saved_file, 'r') as previous_file:
     #         previous_data = json.load(previous_file)
-    
-    with open(os.path.join(local_folder_path, file_name), 'w') as json_file:
-        json.dump(data, json_file)
 
     # if data.get('raisedAmount') > previous_data.get('raisedAmount'):
     #     with open(os.path.join(local_folder_path, file_name), 'w') as json_file:
@@ -64,6 +61,10 @@ def save_to_local_folder(**kwargs):
     #     # Save the current data as the last saved file for future comparison
     #     with open(last_saved_file, 'w') as last_saved:
     #         json.dump(data, last_saved)
+
+    # Save all the data    
+    with open(os.path.join(local_folder_path, file_name), 'w') as json_file:
+        json.dump(data, json_file)
 
 save_task = PythonOperator(
     task_id='save_to_local_folder',
