@@ -47,20 +47,23 @@ def save_to_local_folder(**kwargs):
     # Create a file name with the timestamp
     file_name = f'data_{timestamp}.json'
 
-    # Check if the 'raisedAmount' field has changed compared to the last saved file
-    last_saved_file = os.path.join(local_folder_path, 'last_saved.json')
-    previous_data = {}
-    if os.path.exists(last_saved_file):
-        with open(last_saved_file, 'r') as previous_file:
-            previous_data = json.load(previous_file)
+    # # Check if the 'raisedAmount' field has changed compared to the last saved file
+    # last_saved_file = os.path.join(local_folder_path, 'last_saved.json')
+    # previous_data = {}
+    # if os.path.exists(last_saved_file):
+    #     with open(last_saved_file, 'r') as previous_file:
+    #         previous_data = json.load(previous_file)
     
-    if data.get('raisedAmount') != previous_data.get('raisedAmount'):
-        with open(os.path.join(local_folder_path, file_name), 'w') as json_file:
-            json.dump(data, json_file)
+    with open(os.path.join(local_folder_path, file_name), 'w') as json_file:
+        json.dump(data, json_file)
+
+    # if data.get('raisedAmount') > previous_data.get('raisedAmount'):
+    #     with open(os.path.join(local_folder_path, file_name), 'w') as json_file:
+    #         json.dump(data, json_file)
         
-        # Save the current data as the last saved file for future comparison
-        with open(last_saved_file, 'w') as last_saved:
-            json.dump(data, last_saved)
+    #     # Save the current data as the last saved file for future comparison
+    #     with open(last_saved_file, 'w') as last_saved:
+    #         json.dump(data, last_saved)
 
 save_task = PythonOperator(
     task_id='save_to_local_folder',
