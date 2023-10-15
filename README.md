@@ -13,5 +13,6 @@
 
 ## Arquitetura do projeto
 
-![image](https://github.com/IgorNascAlves/projeto_ghanor/assets/26041581/d493fce6-ce33-498d-85cc-a926caf622b4)
+![image](https://github.com/IgorNascAlves/projeto_ghanor/assets/26041581/8c07aecb-718d-4c72-a941-62c59740c2a7)
+
 
