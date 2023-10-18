@@ -1,10 +1,38 @@
 import schedule
 import time
+import pandas as pd
 import os
 from flask import Flask, render_template
 from data_updater_and_plotter import DataUpdaterAndPlotter
 
 app = Flask(__name__)
+
+def read_metas(raised_amount):
+    #change to float 
+    raised_amount = float(raised_amount)
+
+    df = pd.read_csv('metas_segunda_fase.csv')
+    #get the first row thats the value is lower than the raised amount
+
+    #change columns meta to float
+    df['Meta'] = df['Meta'].str.replace('.', '')
+    df['Meta'] = df['Meta'].astype(float)
+
+    df_last = df[df['Meta'] <= raised_amount]
+    # #get the last row
+    df_last = df_last.iloc[[-1]]
+
+    last = df_last['Conteúdo Adicional'].values[0]
+
+    df_next = df[df['Meta'] >= raised_amount]
+
+    df_next = df_next.iloc[[0]]
+
+    next = df_next['Conteúdo Adicional'].values[0]
+
+    return {'last': last, 'next': next}
+
+    
 
 def update_data():
     url_to_ping = "https://api.ghanor.com.br/api/v1/projects/1/summary"
@@ -41,8 +69,8 @@ def index():
     
     # Sort the list from last to first
     csv_data = sorted(csv_data, key=lambda x: x['date'], reverse=True)
-
-    return render_template('index.html', data=csv_data, image_url=plot_image_url)
+    conteudo = read_metas(raised_amount)
+    return render_template('index.html', data=csv_data, image_url=plot_image_url, conteudo=conteudo)
 
 if __name__ == "__main__":
     app.run(debug=True)
