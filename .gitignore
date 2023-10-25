@@ -1,6 +1,6 @@
 __pycache__/
 .venv/
-datalake/
+DataEng/datalake/bronze
 airflow/
 data.csv
 plot.png

@@ -1,9 +1,10 @@
 from airflow import DAG
 from airflow.providers.http.operators.http import SimpleHttpOperator
-from airflow.operators.python_operator import PythonOperator
+from airflow.operators.python import PythonOperator
 from datetime import datetime
 import json
 import os
+import pandas as pd
 
 # Define your Airflow DAG
 default_args = {
@@ -14,9 +15,9 @@ default_args = {
 }
 
 dag = DAG(
-    'json_to_local_folder',
+    'json_to_local_folder_and_csv',
     default_args=default_args,
-    description='Retrieve JSON and save to a local folder',
+    description='Retrieve JSON and save to a local folder and CSV',
     schedule_interval='* * * * *',  # Run every minute
     catchup=False,
     tags=['data_lake', 'bronze'],
@@ -73,8 +74,33 @@ save_task = PythonOperator(
     dag=dag,
 )
 
+# Python Operator to process existing JSON files and create a CSV
+def process_json_files():
+    input_dir = 'datalake/bronze'
+    output_csv_file = 'datalake/silver/data.csv'
+    columns = ["targetAmount", "raisedAmount", "supporters", "targetDate"]
+
+    data = []
+
+    for filename in os.listdir(input_dir):
+        if filename.startswith('data') and filename.endswith('.json'):
+            with open(os.path.join(input_dir, filename), 'r') as file:
+                json_data = json.load(file)
+                row = [json_data[column] for column in columns]
+                data.append(row)
+
+    if data:
+        df = pd.DataFrame(data, columns=columns)
+        df.to_csv(output_csv_file, index=False)
+
+process_json_task = PythonOperator(
+    task_id='process_json_files',
+    python_callable=process_json_files,
+    dag=dag,
+)
+
 # Define the task dependencies
-http_task >> save_task
+http_task >> save_task >> process_json_task
 
 if __name__ == "__main__":
     dag.cli()
