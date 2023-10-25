@@ -2,9 +2,9 @@
 
 ## Analise PowerBI
 
-![image](https://github.com/IgorNascAlves/projeto_ghanor/assets/26041581/227599fa-1ad2-4dbf-9ac1-e2d24abb54a4)
+![image](https://github.com/IgorNascAlves/projeto_ghanor/assets/26041581/f9018c10-f129-43eb-903e-2d7378c6d06f)
 
-![image](https://github.com/IgorNascAlves/projeto_ghanor/assets/26041581/8893457d-370e-4f8d-9a60-2b93440f5544)
+![image](https://github.com/IgorNascAlves/projeto_ghanor/assets/26041581/c9a60fbe-f1ec-4f14-a9f3-82b1392ee812)
 
 
 ## App
