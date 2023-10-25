@@ -78,7 +78,7 @@ save_task = PythonOperator(
 def process_json_files():
     input_dir = 'datalake/bronze'
     output_csv_file = 'datalake/silver/data.csv'
-    columns = ["targetAmount", "raisedAmount", "supporters", "targetDate"]
+    columns = ["targetAmount", "raisedAmount", "supporters", "targetDate", "datetime"]
 
     data = []
 
@@ -86,7 +86,15 @@ def process_json_files():
         if filename.startswith('data') and filename.endswith('.json'):
             with open(os.path.join(input_dir, filename), 'r') as file:
                 json_data = json.load(file)
-                row = [json_data[column] for column in columns]
+                # Extract the datetime from the filename
+                datetime_str = filename.replace('data_', '').replace('.json', '')
+                try:
+                    datetime_value = datetime.strptime(datetime_str, '%Y%m%d%H%M%S')
+                except ValueError:
+                    # Handle the case where the filename doesn't match the expected format
+                    print(f"Skipping file '{filename}' due to invalid datetime format.")
+                    continue
+                row = [json_data[column] for column in columns[:-1]] + [datetime_value]
                 data.append(row)
 
     if data:
