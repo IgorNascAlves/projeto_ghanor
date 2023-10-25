@@ -9,8 +9,7 @@
 
 ## App
 
-![image](https://github.com/IgorNascAlves/projeto_ghanor/assets/26041581/81ba4682-32cf-499e-81f2-c5a65d543d1d)
-
+![image](https://github.com/IgorNascAlves/projeto_ghanor/assets/26041581/2a95c9bf-0045-4c56-967a-65f6ce1ef078)
 
 ## Primeiro resultado
 
