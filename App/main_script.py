@@ -23,14 +23,18 @@ def read_metas(raised_amount):
     df_last = df_last.iloc[[-1]]
 
     last = df_last['Conteúdo Adicional'].values[0]
+    last_value = df_last['Meta'].values[0]
 
     df_next = df[df['Meta'] >= raised_amount]
 
     df_next = df_next.iloc[[0]]
 
     next = df_next['Conteúdo Adicional'].values[0]
+    next_value = df_next['Meta'].values[0]
 
-    return {'last': last, 'next': next}
+    return {'last': last, 'next': next,
+             'last_value': last_value, 'next_value': next_value,
+               'falta': int(next_value - raised_amount)}
 
     
 

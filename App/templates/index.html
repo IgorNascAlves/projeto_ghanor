@@ -42,25 +42,101 @@
                 <th>Raised Amount</th>
             </tr>
         </thead>
-        <tbody id="data-table-body"> <!-- Added an ID for the tbody element -->
+        <tbody id="data-table-body">
             {% for row in data %}
             <tr>
                 <td>{{ row.date }}</td>
-                <td>{{ row.raised_amount }}</td>
+                <td id="formattedRaisedAmount_{{ loop.index }}"></td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
     <br>
-    Last Conteudo
-    {{ conteudo.last }}
-    <br>
-    <br>
-    Next Conteudo
-    {{ conteudo.next }}
+    <table>
+        <thread>
+            <tr>
+                <th>Conteudo</th>
+                <th>Valor</th>
+                <th>Falta</th>
+            </tr>
+            <tr>
+                <td>{{ conteudo.last }}</td>
+                <td id="formattedLastValue"></td>
+            </tr>
+            <tr>
+                <td>{{ conteudo.next }}</td>
+                <td id="formattedNextValue"></td>
+                <td id="formattedFalta"></td>
+            </tr>
+        </thread>
+    </table>
+
+    <p id="countdown"></p>
+
     <h1>Plot</h1>
     <img src="{{ image_url }}" alt="Plot">
 
+    <script>
+        // JavaScript code to format the value in conteudo.falta
+        const faltaValue = parseFloat("{{ conteudo.falta }}"); // Assuming conteudo.falta is a numeric value
+        const next_value = parseFloat("{{ conteudo.next_value }}"); // Assuming conteudo.next_value is a numeric value
+        const last_value = parseFloat("{{ conteudo.last_value }}"); // Assuming conteudo.last_value is a numeric value
+        
+        const formattedFalta = new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        }).format(faltaValue);
+        const formattedNextValue = new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        }).format(next_value);
+        const formattedLastValue = new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        }).format(last_value);
     
+        // Display the formatted value in the "formattedFalta" element
+        document.getElementById('formattedFalta').textContent = formattedFalta;
+        document.getElementById('formattedNextValue').textContent = formattedNextValue;
+        document.getElementById('formattedLastValue').textContent = formattedLastValue;
+
+        // JavaScript code to calculate and display the countdown
+        function updateCountdown() {
+            const projectEndDate = new Date("2023-11-10"); // Set the project end date
+
+            const currentDate = new Date();
+            const timeRemaining = projectEndDate - currentDate;
+            
+            const daysRemaining = Math.ceil(timeRemaining / (1000 * 60 * 60 * 24)); // Calculate days remaining
+            
+            if (daysRemaining > 0) {
+                document.getElementById('countdown').textContent = `Days remaining for the project: ${daysRemaining}`;
+            } else {
+                document.getElementById('countdown').textContent = "The project has ended.";
+            }
+        }
+
+        // Call the function to update the countdown when the page loads
+        updateCountdown();
+
+    </script>
+
+
+
+<script>
+    {% for row in data %}
+    // JavaScript code to format the raised_amount for each row
+    const raisedAmountValue_{{ loop.index }} = parseFloat("{{ row.raised_amount }}"); // Assuming row.raised_amount is numeric
+
+    const formattedRaisedAmount_{{ loop.index }} = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    }).format(raisedAmountValue_{{ loop.index }});
+
+    // Display the formatted value in the corresponding "formattedRaisedAmount" element
+    document.getElementById('formattedRaisedAmount_{{ loop.index }}').textContent = formattedRaisedAmount_{{ loop.index }};
+    {% endfor %}
+</script>
+
 </body>
 </html>
