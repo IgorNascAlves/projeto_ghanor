@@ -62,7 +62,7 @@ class DataUpdaterAndPlotter:
                     csv_writer.writerow(['DateTime', 'RaisedAmount'])
                 csv_writer.writerow([current_datetime_str, str(data['raisedAmount'])])
 
-        print("Data saved successfully.")
+        # print("Data saved successfully.")
         return existing_data
 
     def save_plot(self, filename):
