@@ -47,6 +47,12 @@ A arquitetura do projeto é dividida em três áreas principais:
 
 ![Aplicação - Dashboard Inicial](https://github.com/IgorNascAlves/projeto_ghanor/assets/26041581/2a95c9bf-0045-4c56-967a-65f6ce1ef078)
 
+## Comparação de Campanhas
+Explore os dados e análises comparativas diretamente na página abaixo:
+
+[Monitoramento e Comparação de Campanhas](https://igornascalves.github.io/projeto_ghanor/)
+
+
 ## Comparação de financiamento coletivo
 
 ![Primeiro Resultado - Gráficos](https://github.com/IgorNascAlves/projeto_ghanor/assets/26041581/c96b0473-f59f-4170-92b2-f4d1e414ed97)
