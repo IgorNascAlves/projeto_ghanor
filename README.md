@@ -65,5 +65,32 @@ Os gráficos mostram o desempenho das campanhas ao longo do tempo, comparando m�
 
 ---
 
+## Conclusão
+
+### Análise do Gráfico de Desempenho das Campanhas
+
+O gráfico analisado demonstra a variação do total arrecadado ao longo do tempo, comparando três campanhas de financiamento coletivo: **Ordem Paranormal**, **Coleção Cthulhu** e **Tesouros de Ghanor**. As principais observações são:
+
+1. **Comportamento Geral:**
+   - Há um pico significativo de arrecadação nos primeiros dias de todas as campanhas, mostrando a importância do engajamento inicial.
+   - Após o pico inicial, a arrecadação diminui rapidamente e se estabiliza, com um leve aumento nos dias finais.
+
+2. **Comparação entre os Projetos:**
+   - **Tesouros de Ghanor** teve o maior pico inicial, atingindo cerca de 4 milhões no primeiro dia, mas apresentou uma queda acentuada nos dias seguintes.
+   - **Coleção Cthulhu** destacou-se com um crescimento expressivo no final da campanha, possivelmente devido a uma comunicação eficaz e estratégias para estimular contribuições tardias.
+   - **Ordem Paranormal** apresentou um desempenho mais estável, com menos variações extremas ao longo do período.
+
+3. **Padrões Identificados:**
+   - **Engajamento Inicial e Final:** O início e o fim das campanhas são os períodos mais críticos para maximizar a arrecadação.
+   - **Diferença entre Projetos:** Estratégias diferentes resultaram em picos em momentos distintos, indicando oportunidades para ajustes táticos durante a campanha.
+
+### Insights para o Futuro
+- **Engajamento Contínuo:** É essencial manter o interesse dos apoiadores no período intermediário da campanha, utilizando atualizações frequentes e incentivos.
+- **Senso de Urgência no Final:** A utilização de estratégias que gerem urgência nos últimos dias pode elevar significativamente os valores arrecadados.
+- **Comparação de Estratégias:** A análise comparativa permite identificar boas práticas e ajustar as campanhas futuras para alcançar resultados ainda melhores.
+
+---
+
 ## Contato
 [LinkedIn](https://www.linkedin.com/in/igor-nascimento-alves/) | [GitHub](https://github.com/IgorNascAlves)
+
