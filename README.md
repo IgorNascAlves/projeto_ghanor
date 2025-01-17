@@ -5,10 +5,40 @@ Este projeto foi desenvolvido para monitorar e visualizar o progresso de campanh
 
 ---
 
+## Por Que o Jovem Nerd?
+
+O **Jovem Nerd** é uma das maiores e mais influentes comunidades nerds do Brasil, amplamente reconhecida por seu impacto cultural e pela capacidade de mobilizar fãs para projetos ambiciosos. O uso de **financiamento coletivo** por eles, com campanhas como **Nerdcast RPG: Tesouros de Ghanor** e **Coleção Cthulhu**, consolidou seu papel como uma referência no mercado brasileiro. Essas campanhas não apenas captaram milhões de reais, mas também ajudaram a popularizar o modelo de crowdfunding como uma forma viável de viabilizar projetos criativos.
+
+Entretanto, é importante destacar o papel de **Ordem Paranormal**, criado por **Cellbit**, que quebrou recordes e abriu caminho para que outras iniciativas brasileiras reconhecessem o potencial do financiamento coletivo em larga escala. A impressionante mobilização da comunidade em torno de Ordem Paranormal demonstrou o impacto que uma base de fãs engajada pode ter e, de certa forma, serviu como inspiração para o Jovem Nerd explorar estratégias semelhantes em suas próprias campanhas.
+
+Monitorar essas campanhas – incluindo **Ordem Paranormal**, **Tesouros de Ghanor** e **Coleção Cthulhu** – oferece não apenas insights sobre as estratégias adotadas, mas também evidencia como o financiamento coletivo pode ser utilizado de forma criativa e eficaz no Brasil.
+
+### Links Relevantes
+- [Campanha Nerdcast RPG 2](https://www.ghanor.com.br/)  
+- [Campanha Nerdcast RPG 1](https://www.catarse.me/nerdcastrpg)  
+- [Campanha Ordem Paranormal](https://www.catarse.me/ordem)  
+
+Ao escolher esses projetos como foco, o objetivo foi evidenciar o impacto cultural e estratégico de campanhas que mobilizam milhares de pessoas e explorar como a análise de dados pode contribuir para o sucesso dessas iniciativas.
+
+---
+
 ## Sobre o Projeto
 
 ### Arquitetura
-![Arquitetura do Projeto](https://github.com/IgorNascAlves/projeto_ghanor/assets/26041581/8c07aecb-718d-4c72-a941-62c59740c2a7)
+
+![Arquitetura do projeto
+APIs
+Airflow
+Data Lake
+Jupyter Notebook
+PowerBI
+Dados de diversas fontes
+Processo de ETL
+Separados em camadas bronze, silver e gold
+Os dados são usados para visualizações.
+Os dados são acessados para análise e criação de modelos](https://github.com/user-attachments/assets/fa667284-6855-4c6b-9085-7ecf6923b21d)
+
+
 
 A arquitetura do projeto é dividida em três áreas principais:
 
